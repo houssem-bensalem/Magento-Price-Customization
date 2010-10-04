@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <HBS_Price>
+            <version>1.0.0</version>
+        </HBS_Price>
+    </modules>
+    <global>
+        <helpers>
+            <price>
+                <class>HBS_Price_Helper</class>
+            </price>
+        </helpers>
+        <models>
+            <price>
+                <class>HBS_Price_Model</class>
+            </price>
+            <directory>
+				<rewrite>
+					<currency>HBS_Price_Model_Price</currency>
+				</rewrite>
+			</directory>
+        </models>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <price translate="title" module="customer">
+                                            <title>Price Management</title>
+                                            <sort_order>50</sort_order>
+                                        </price>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

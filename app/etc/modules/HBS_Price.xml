@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <HBS_Price>
+            <active>true</active>
+            <codePool>local</codePool>
+        </HBS_Price>
+    </modules>
+</config> 

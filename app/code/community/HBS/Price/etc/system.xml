@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <price translate="label" module="price">
+            <label>Custom Price</label>
+            <sort_order>301</sort_order>
+        </price>
+    </tabs>
+    <sections>
+        <price translate="label" module="price">
+            <label>Price Manager</label>
+            <tab>price</tab>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <price translate="label">
+                    <label>Price Custom Display</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <currency translate="label comment">
+                            <label>Custom Curency Symbol / Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Custom currency Symbol / Text to show.</comment>
+                        </currency>
+                    </fields>                    
+                    <fields>
+                        <show translate="label comment">
+                            <label>Display Position</label>
+                            <frontend_type>radios</frontend_type>
+                            <sort_order>2</sort_order>
+                            <source_model>price/Position</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Display Currency at left or right of the price</comment>
+                        </show>
+                    </fields>                    
+                    <fields>
+                        <precision translate="label comment">
+                            <label>Precision</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Precision</comment>
+                            <validate>validate-number</validate>
+                        </precision>
+                    </fields>                    
+                    <fields>
+                        <display translate="label comment">
+                            <label>Currency Display Type</label>
+                            <frontend_type>radios</frontend_type>
+                            <source_model>price/Show</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Choose how to display currency</comment>
+                        </display>
+                    </fields>                    
+                </price>
+            </groups>                        
+        </price>
+    </sections>
+</config>
